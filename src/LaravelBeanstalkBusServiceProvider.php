@@ -20,8 +20,8 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/laravel-beanstalk-bus.php' => config_path('laravel-beanstalk-bus.php'),
-            __DIR__ . '/../config/beanstalk-bus-events-config.php' => config_path('beanstalk-bus-events-config.php'),
+            __DIR__ . '/../config/beanstalk-bus.php' => config_path('beanstalk-bus.php'),
+            __DIR__ . '/../config/beanstalk-bus-events.php' => config_path('beanstalk-bus-events.php'),
         ], 'config');
 
         $this->commands([
@@ -42,7 +42,7 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
         $this->app->singleton(MessageBus::class, function (Application $app) {
             return new MessageBus(
                 new Connection(config('laravel-beanstalk-bus.host'), config('laravel-beanstalk-bus.port')),
-                new Provider(include config_path('beanstalk-bus-events-config.php')),
+                new Provider(include config_path('beanstalk-bus-events.php')),
                 $app->make(LoggerInterface::class),
                 $app->make(APMSenderInterface::class),
                 $app->make(TagsFactory::class),
