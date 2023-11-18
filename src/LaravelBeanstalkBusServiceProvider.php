@@ -41,7 +41,7 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
     {
         $this->app->singleton(MessageBus::class, function (Application $app) {
             return new MessageBus(
-                new Connection(config('laravel-beanstalk-bus.host'), config('laravel-beanstalk-bus.port')),
+                new Connection(config('beanstalk-bus.host'), config('beanstalk-bus.port')),
                 new Provider(include config_path('beanstalk-bus-events.php')),
                 $app->make(LoggerInterface::class),
                 $app->make(APMSenderInterface::class),
