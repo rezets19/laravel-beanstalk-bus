@@ -1,0 +1,23 @@
+{
+    "name": "rezets19/laravel-beanstalk-bus",
+    "autoload": {
+        "psr-4": {
+            "LaravelBeanstalkBus\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rezets"
+        }
+    ],
+    "require": {
+        "rezets19/beanstalk-bus": "^0.6.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelBeanstalkBus\\LaravelBeanstalkBusServiceProvider"
+            ]
+        }
+    }
+}
