@@ -1,7 +1,9 @@
 # Beanstalk message bus - laravel package
 
 ## Install 
-``composer require rezets19/laravel-beanstalk-bus``
+```sh 
+composer require rezets19/laravel-beanstalk-bus
+```
 
 ## Start listener
 ```sh  

@@ -9,7 +9,7 @@ use bus\handler\IHandler;
 use bus\impl\NullAPMSender;
 use bus\interfaces\APMSenderInterface;
 use bus\MessageBus;
-use Illuminate\Foundation\Application;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use LaravelBeanstalkBus\Console\ListenerCommand;
 use LaravelBeanstalkBus\Console\RaiseEventCommand;
@@ -20,8 +20,8 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/beanstalk-bus.php' => config_path('beanstalk-bus.php'),
-            __DIR__ . '/../config/beanstalk-bus-events.php' => config_path('beanstalk-bus-events.php'),
+            __DIR__ . '/../config/beanstalk-bus.php' => $this->app->configPath('beanstalk-bus.php'),
+            __DIR__ . '/../config/beanstalk-bus-events.php' => $this->app->configPath('beanstalk-bus-events.php'),
         ], 'config');
 
         $this->commands([
@@ -38,11 +38,11 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
     }
 
     protected function makeMessageBus(): void
-    {
+    { config();
         $this->app->singleton(MessageBus::class, function (Application $app) {
             return new MessageBus(
-                new Connection(config('beanstalk-bus.host'), config('beanstalk-bus.port')),
-                new Provider(include config_path('beanstalk-bus-events.php')),
+                new Connection($this->app->make('config')->get('beanstalk-bus.host'), $this->app->make('config')->get('beanstalk-bus.port')),
+                new Provider(include $this->app->configPath('beanstalk-bus-events.php')),
                 $app->make(LoggerInterface::class),
                 $app->make(APMSenderInterface::class),
                 $app->make(TagsFactory::class),
