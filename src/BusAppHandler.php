@@ -3,7 +3,9 @@
 namespace LaravelBeanstalkBus;
 
 use bus\handler\IHandler;
-use Illuminate\Foundation\Application;
+use Illuminate\Contracts\Container\BindingResolutionException;
+use Illuminate\Contracts\Foundation\Application;
+use ReflectionException;
 use ReflectionMethod;
 
 class BusAppHandler implements IHandler
@@ -12,6 +14,13 @@ class BusAppHandler implements IHandler
     {
     }
 
+    /**
+     * @param object $event
+     * @param iterable $handlers
+     * @return void
+     * @throws BindingResolutionException
+     * @throws ReflectionException
+     */
     public function handle(object $event, iterable $handlers): void
     {
         foreach ($handlers as $item) {
@@ -25,7 +34,8 @@ class BusAppHandler implements IHandler
      * @param mixed $closure
      * @param string $method
      * @return void
-     * @throws \ReflectionException
+     * @throws ReflectionException
+     * @throws BindingResolutionException
      */
     public function call(object $event, mixed $closure, string $method): void
     {

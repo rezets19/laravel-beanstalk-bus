@@ -3,6 +3,7 @@
 namespace LaravelBeanstalkBus\Console;
 
 use Illuminate\Console\Command;
+use Illuminate\Contracts\Foundation\Application;
 use LaravelBeanstalkBus\Factory\LaravelListenerFactory;
 
 class ListenerCommand extends Command
@@ -14,8 +15,8 @@ class ListenerCommand extends Command
      * @param LaravelListenerFactory $listenerFactory
      * @return void
      */
-    public function handle(LaravelListenerFactory $listenerFactory): void
+    public function handle(LaravelListenerFactory $listenerFactory, Application $app): void
     {
-        $listenerFactory->create($this->argument('queue'), storage_path('logs'))->listen();
+        $listenerFactory->create($this->argument('queue'), $app->storagePath('logs'))->listen();
     }
 }
