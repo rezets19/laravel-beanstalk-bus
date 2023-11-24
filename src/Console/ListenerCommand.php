@@ -13,6 +13,7 @@ class ListenerCommand extends Command
 
     /**
      * @param LaravelListenerFactory $listenerFactory
+     * @param Application $app
      * @return void
      */
     public function handle(LaravelListenerFactory $listenerFactory, Application $app): void
