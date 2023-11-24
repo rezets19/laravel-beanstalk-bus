@@ -19,5 +19,8 @@
                 "LaravelBeanstalkBus\\LaravelBeanstalkBusServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
     }
 }
