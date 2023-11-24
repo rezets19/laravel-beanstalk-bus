@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f50416917a7e523148aae5d5f30be4e",
+    "content-hash": "73ed0f6b5279bf322e1cf8f8308d1c7d",
     "packages": [
         {
             "name": "json-mapper/json-mapper",
@@ -606,6 +606,42 @@
                 "source": "https://github.com/rezets19/beanstalk-bus/tree/0.6.2"
             },
             "time": "2023-11-18T15:37:44+00:00"
+        },
+        {
+            "name": "rezets19/reflection",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rezets19/reflection.git",
+                "reference": "8fdbdbd2df2a06454d3d6cbda3e9d4024cbc1cc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rezets19/reflection/zipball/8fdbdbd2df2a06454d3d6cbda3e9d4024cbc1cc1",
+                "reference": "8fdbdbd2df2a06454d3d6cbda3e9d4024cbc1cc1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Reflection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Rezets"
+                }
+            ],
+            "description": "Reflection helper class",
+            "support": {
+                "issues": "https://github.com/rezets19/reflection/issues",
+                "source": "https://github.com/rezets19/reflection/tree/0.1.0"
+            },
+            "time": "2023-11-24T16:06:09+00:00"
         },
         {
             "name": "symfony/cache",

@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\LaravelBeanstalkBus\Unit\Console;
 
 use Illuminate\Contracts\Foundation\Application;
 use LaravelBeanstalkBus\Console\ListenerCommand;
 use LaravelBeanstalkBus\Factory\LaravelListenerFactory;
 use PHPUnit\Framework\TestCase;
-use ReflectionProperty;
+use Reflection\ReflectionHelper;
 use Symfony\Component\Console\Input\InputInterface;
 
 class ListenerCommandTest extends TestCase
@@ -15,11 +15,11 @@ class ListenerCommandTest extends TestCase
 
     protected function setUp(): void
     {
-        $property = new ReflectionProperty(ListenerCommand::class, 'input');
-        $property->setAccessible(true);
+        $reflectionHelper = new ReflectionHelper();
+
         $this->listenerCommand = new ListenerCommand();
         $this->input = $this->createMock(InputInterface::class);
-        $property->setValue($this->listenerCommand, $this->input);
+        $reflectionHelper->setProperty($this->listenerCommand, 'input', $this->input);
 
         $this->laravelListenerFactory = $this->createMock(LaravelListenerFactory::class);
         $this->application = $this->createMock(Application::class);

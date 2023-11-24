@@ -2,7 +2,8 @@
     "name": "rezets19/laravel-beanstalk-bus",
     "autoload": {
         "psr-4": {
-            "LaravelBeanstalkBus\\": "src/"
+            "LaravelBeanstalkBus\\": "src/",
+            "Tests\\LaravelBeanstalkBus\\": "tests/"
         }
     },
     "authors": [
@@ -21,6 +22,7 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.4"
+        "phpunit/phpunit": "^10.4",
+        "rezets19/reflection": "^0.1.0"
     }
 }
