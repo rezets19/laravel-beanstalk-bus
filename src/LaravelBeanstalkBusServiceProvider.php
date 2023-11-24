@@ -38,7 +38,7 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
     }
 
     protected function makeMessageBus(): void
-    { config();
+    {
         $this->app->singleton(MessageBus::class, function (Application $app) {
             return new MessageBus(
                 new Connection($this->app->make('config')->get('beanstalk-bus.host'), $this->app->make('config')->get('beanstalk-bus.port')),
