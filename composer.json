@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "rezets19/beanstalk-bus": "^0.7.0"
+        "rezets19/beanstalk-bus": "^0.7.1"
     },
     "extra": {
         "laravel": {

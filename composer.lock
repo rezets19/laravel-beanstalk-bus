@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2e5c6c980cd0b1c49976f42deafbe70",
+    "content-hash": "3e7a576eb4e2bf9f5a127ecd0744fd7e",
     "packages": [
         {
             "name": "json-mapper/json-mapper",
@@ -568,16 +568,16 @@
         },
         {
             "name": "rezets19/beanstalk-bus",
-            "version": "0.7.0",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rezets19/beanstalk-bus.git",
-                "reference": "53ca1d5c4dac7b22fe328c53ab0a38febc04a411"
+                "reference": "1a6ee8d2eac2b186dd6c13446b037af8b5179e53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rezets19/beanstalk-bus/zipball/53ca1d5c4dac7b22fe328c53ab0a38febc04a411",
-                "reference": "53ca1d5c4dac7b22fe328c53ab0a38febc04a411",
+                "url": "https://api.github.com/repos/rezets19/beanstalk-bus/zipball/1a6ee8d2eac2b186dd6c13446b037af8b5179e53",
+                "reference": "1a6ee8d2eac2b186dd6c13446b037af8b5179e53",
                 "shasum": ""
             },
             "require": {
@@ -605,9 +605,9 @@
             ],
             "support": {
                 "issues": "https://github.com/rezets19/beanstalk-bus/issues",
-                "source": "https://github.com/rezets19/beanstalk-bus/tree/0.7.0"
+                "source": "https://github.com/rezets19/beanstalk-bus/tree/0.7.1"
             },
-            "time": "2025-04-05T10:41:08+00:00"
+            "time": "2025-04-05T12:30:42+00:00"
         },
         {
             "name": "symfony/cache",
