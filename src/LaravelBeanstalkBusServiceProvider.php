@@ -5,7 +5,7 @@ namespace LaravelBeanstalkBus;
 use bus\config\Connection;
 use bus\config\Provider;
 use bus\factory\TagsFactory;
-use bus\handler\IHandler;
+use bus\handler\HandlerInterface;
 use bus\impl\NullAPMSender;
 use bus\interfaces\APMSenderInterface;
 use bus\MessageBus;
@@ -46,7 +46,7 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
                 $app->make(LoggerInterface::class),
                 $app->make(APMSenderInterface::class),
                 $app->make(TagsFactory::class),
-                $app->make(IHandler::class)
+                $app->make(HandlerInterface::class)
             );
         });
     }
@@ -60,7 +60,7 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
 
     protected function makeHandler()
     {
-        $this->app->bind(IHandler::class, function (Application $app) {
+        $this->app->bind(HandlerInterface::class, function (Application $app) {
             return $app->make(BusAppHandler::class);
         });
     }

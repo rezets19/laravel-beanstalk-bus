@@ -3,7 +3,7 @@
 namespace LaravelBeanstalkBus\Factory;
 
 use bus\factory\ListenerFactory;
-use bus\handler\IHandler;
+use bus\handler\HandlerInterface;
 use bus\interfaces\APMSenderInterface;
 use bus\Listener;
 use bus\MessageBus;
@@ -24,7 +24,7 @@ class LaravelListenerFactory
             $this->app->make(MessageBus::class),
             $this->app->make(LoggerInterface::class),
             $this->app->make(APMSenderInterface::class),
-            $this->app->make(IHandler::class)
+            $this->app->make(HandlerInterface::class)
         );
     }
 }
