@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "603c8126f49e35ad26161cfdbf95f04d",
+    "content-hash": "40dd3be8550a549fc1b174dc6d1b3afb",
     "packages": [
         {
             "name": "json-mapper/json-mapper",
-            "version": "2.22.3",
+            "version": "2.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JsonMapper/JsonMapper.git",
-                "reference": "a0ca67d3201f1379a2df9ef43cd3db5b70421274"
+                "reference": "82752af438c5b83f35e651eff7e67b80864b3b02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JsonMapper/JsonMapper/zipball/a0ca67d3201f1379a2df9ef43cd3db5b70421274",
-                "reference": "a0ca67d3201f1379a2df9ef43cd3db5b70421274",
+                "url": "https://api.github.com/repos/JsonMapper/JsonMapper/zipball/82752af438c5b83f35e651eff7e67b80864b3b02",
+                "reference": "82752af438c5b83f35e651eff7e67b80864b3b02",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-03T11:54:11+00:00"
+            "time": "2025-04-08T09:50:03+00:00"
         },
         {
             "name": "myclabs/php-enum",
@@ -568,16 +568,16 @@
         },
         {
             "name": "rezets19/beanstalk-bus",
-            "version": "0.8.0",
+            "version": "0.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rezets19/beanstalk-bus.git",
-                "reference": "e59f7aca7704e9233e98fe76782df6a252b12d79"
+                "reference": "ff75be306913175f398144507db75caaa5a62743"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rezets19/beanstalk-bus/zipball/e59f7aca7704e9233e98fe76782df6a252b12d79",
-                "reference": "e59f7aca7704e9233e98fe76782df6a252b12d79",
+                "url": "https://api.github.com/repos/rezets19/beanstalk-bus/zipball/ff75be306913175f398144507db75caaa5a62743",
+                "reference": "ff75be306913175f398144507db75caaa5a62743",
                 "shasum": ""
             },
             "require": {
@@ -605,9 +605,9 @@
             ],
             "support": {
                 "issues": "https://github.com/rezets19/beanstalk-bus/issues",
-                "source": "https://github.com/rezets19/beanstalk-bus/tree/0.8.0"
+                "source": "https://github.com/rezets19/beanstalk-bus/tree/0.8.1"
             },
-            "time": "2025-04-05T14:21:39+00:00"
+            "time": "2025-04-15T05:13:25+00:00"
         },
         {
             "name": "symfony/cache",

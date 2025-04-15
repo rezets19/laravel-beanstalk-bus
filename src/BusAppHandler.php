@@ -2,13 +2,13 @@
 
 namespace LaravelBeanstalkBus;
 
-use bus\handler\IHandler;
+use bus\handler\HandlerInterface;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Foundation\Application;
 use ReflectionException;
 use ReflectionMethod;
 
-class BusAppHandler implements IHandler
+class BusAppHandler implements HandlerInterface
 {
     public function __construct(private Application $app)
     {
