@@ -15,9 +15,6 @@ class BusAppHandler implements HandlerInterface
     }
 
     /**
-     * @param object $event
-     * @param iterable $handlers
-     * @return void
      * @throws BindingResolutionException
      * @throws ReflectionException
      */
@@ -30,10 +27,6 @@ class BusAppHandler implements HandlerInterface
     }
 
     /**
-     * @param object $event
-     * @param mixed $closure
-     * @param string $method
-     * @return void
      * @throws ReflectionException
      * @throws BindingResolutionException
      */

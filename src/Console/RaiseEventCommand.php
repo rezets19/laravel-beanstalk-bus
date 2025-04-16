@@ -7,6 +7,7 @@ use bus\exception\BrokerNotFoundException;
 use bus\impl\TEvent;
 use bus\MessageBus;
 use Illuminate\Console\Command;
+use Pheanstalk\Exception\NoImplementationException;
 
 class RaiseEventCommand extends Command
 {
@@ -14,10 +15,9 @@ class RaiseEventCommand extends Command
     protected $description = 'Raise new event';
 
     /**
-     * @param MessageBus $messageBus
-     * @return void
      * @throws ConfigNotFoundException
      * @throws BrokerNotFoundException
+     * @throws NoImplementationException
      */
     public function handle(MessageBus $messageBus): void
     {
