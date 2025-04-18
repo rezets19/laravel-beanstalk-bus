@@ -13,6 +13,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use LaravelBeanstalkBus\Console\ListenerCommand;
 use LaravelBeanstalkBus\Console\RaiseEventCommand;
+use LaravelBeanstalkBus\Console\WorkerCommand;
 use Psr\Log\LoggerInterface;
 
 class LaravelBeanstalkBusServiceProvider extends ServiceProvider
@@ -27,6 +28,7 @@ class LaravelBeanstalkBusServiceProvider extends ServiceProvider
         $this->commands([
             RaiseEventCommand::class,
             ListenerCommand::class,
+            WorkerCommand::class,
         ]);
     }
 
