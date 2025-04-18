@@ -11,11 +11,6 @@ class ListenerCommand extends Command
     protected $signature = 'bus:listen {queue}';
     protected $description = 'Start listener for queue';
 
-    /**
-     * @param LaravelListenerFactory $listenerFactory
-     * @param Application $app
-     * @return void
-     */
     public function handle(LaravelListenerFactory $listenerFactory, Application $app): void
     {
         $listenerFactory->create($this->argument('queue'), $app->storagePath('logs'))->listen();

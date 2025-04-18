@@ -15,5 +15,10 @@ php artisan bus:listen {queue}
 php artisan bus:event
 ```
 
+## Worker for systemd
+```sh  
+php artisan bus:worker {queue}
+```
+
 ## Docs
 [Beanstalk message bus standalone package](https://github.com/rezets19/beanstalk-bus)
